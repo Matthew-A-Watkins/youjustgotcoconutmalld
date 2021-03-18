@@ -11,6 +11,7 @@
        if (video.paused) {
           video.play();
           button.style.visibility = "hidden";
+          video.style.display = "inline";
        }
 
     }
@@ -20,21 +21,31 @@
 <body>        
     <center>
 
-    <video id="Video1"> 
+    <video id="Video1" loop> 
         <source src="movie.mp4" type="video/mp4"/>
     </video>
 
     <div id="buttonbar">
-        <button id="button" onclick=vidplay()></button>
+
+        <button id="button" onclick=vidplay()>click</button>
 
         <style>
-
+            body {
+                background-image: url("coconut.jpeg");
+                background-repeat: repeat;
+            }
+            
             #button {
                 width: 150px;
                 height: 150px;
-                background-image: url(coconut.jpeg);
+                background-image: url("coconutmall.png");
                 background-size: cover;
                 background-color: #eee;
+            }
+            #Video1 {
+                width: 1080px;
+                height: 720px;
+                display: none;
             }
 
         </style>
