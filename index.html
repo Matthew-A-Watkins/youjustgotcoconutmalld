@@ -1,19 +1,45 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> 
 
-    <head>
-        <title>
-            LMAO COCONUT MALL
-        </title>
-    </head>
+<script type="text/javascript">
 
-    <body>
-        <center>
-            <div class="iframe-container">
-                <video width="1080" height="720" loop autoplay muted>
-                    <source src="movie.mp4" type="video/mp4">
-                </video>
-            </div>
-        </center>
-    </body>
-</html>
+    // play video on button press
+    function vidplay() {
+
+       var video = document.getElementById("Video1");
+       var button = document.getElementById("button");
+
+       if (video.paused) {
+          video.play();
+          button.style.visibility = "hidden";
+       }
+
+    }
+</script>
+
+</head>
+<body>        
+    <center>
+
+    <video id="Video1"> 
+        <source src="movie.mp4" type="video/mp4"/>
+    </video>
+
+    <div id="buttonbar">
+        <button id="button" onclick=vidplay()></button>
+
+        <style>
+
+            #button {
+                width: 150px;
+                height: 150px;
+                background-image: url(coconut.jpeg);
+                background-size: cover;
+                background-color: #eee;
+            }
+
+        </style>
+
+    </div>
+
+    </center>
+</body>    
